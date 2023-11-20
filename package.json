@@ -1,0 +1,16 @@
+{
+  "name": "carbon-icons-lit",
+  "type": "module",
+  "scripts":
+  {
+    "build": "node build.js && tsc"
+  },
+  "license": "Apache-2.0",
+  "devDependencies":
+  {
+    "@carbon/icon-helpers": "^10.45.0",
+    "@carbon/icons": "11.30.1",
+    "lit-html": "^3.1.0",
+    "typescript": "^5.2.2"
+  }
+}
