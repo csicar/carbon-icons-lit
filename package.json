@@ -1,6 +1,7 @@
 {
   "name": "carbon-icons-lit",
   "type": "module",
+  "version": "1",
   "scripts":
   {
     "build": "node build.js && tsc"

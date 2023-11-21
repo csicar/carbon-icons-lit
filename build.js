@@ -27,7 +27,6 @@ const indexJs = icons.icons.map(icon => {
         const {moduleName, filepath, descriptor} = output
 
         const svg = toString(descriptor)
-        console.log(svg)
 
         const folder = path.dirname(filepath)
         fs.mkdirSync(`./src/${folder}`, {recursive: true})
@@ -39,5 +38,3 @@ const indexJs = icons.icons.map(icon => {
 }).join("\n\n");
 
 fs.writeFileSync(`./src/index.ts`, indexJs, {encoding: "utf8"})
-
-fs.copyFileSync("package.json", "dist/package.json")

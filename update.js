@@ -27,14 +27,14 @@ async function updatePackageJson(carbonVersion, ownVersion) {
   try {
     const packageJsonPath = 'package.json';
     const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf8'));
-
-
-    if (null === carbonVersion) {
+    const newExpectedVersion = `${carbonVersion}-${packageJson.version}`
+    console.log(newExpectedVersion)
+    if (ownVersion === newExpectedVersion) {
       console.log('Already up-to-date');
       process.exit(0);
     }
 
-    packageJson.version = carbonVersion;
+    packageJson.version = newExpectedVersion;
     packageJson.devDependencies['@carbon/icons'] = carbonVersion;
 
     mkdirSync('./dist', { recursive:true })
