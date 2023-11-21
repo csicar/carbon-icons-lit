@@ -32,6 +32,7 @@ $ bat node_modules/carbon-icons-lit/16.*
    1   │ import { svg } from "lit-html";
    2   │ export default svg`<svg ...><path d="M8 2c1.4 0 2.5...</svg>`;
 ```
+see all files here on [npm](https://www.npmjs.com/package/carbon-icons-lit?activeTab=code)
 
 ## Usage
 
